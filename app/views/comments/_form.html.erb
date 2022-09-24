@@ -1,0 +1,7 @@
+<%= form_with model: [@post, @post.comments.build] do |f| %>
+ <%= f.label :title, "Title" %>
+ <p><%= f.text_field :title %></p>
+ <%= f.label :comment, "Comment" %>
+ <p><%= f.rich_text_area :comment %></p>
+ <%= f.submit "Save Comment" %>
+<% end %>
