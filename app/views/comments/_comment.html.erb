@@ -1,5 +1,5 @@
-<div class="container">
-  <h4><%= comment.title %></h4>
-  <p><%= comment.comment %></p>
-  <%= button_to "Delete",[comment.post, comment],method: :delete %>
-</div>
+<h4><%= comment.title %></h4>
+<p><%= comment.comment %></p>
+<% if comment.title %>
+  <%= button_to "Delete", [comment.post, comment], method: :delete, class: "btn btn-danger" %>
+<% end %>

@@ -13,3 +13,25 @@
  *= require_tree .
  *= require_self
  */
+
+
+.account-name {
+  margin: 0.4em;
+}
+
+.account-name a {
+  color: #ffc107;
+  text-decoration: none;
+}
+
+.comments {
+  margin-top: 3em;
+}
+
+.comments-body {
+  margin-top: 1em;
+}
+
+.comment-form {
+  margin-bottom: 1em;
+}

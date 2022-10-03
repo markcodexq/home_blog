@@ -3,7 +3,7 @@ class CommentsController < ApplicationController
 
   def create
     @comment = @post.comments.create(params[:comment].permit(:title, :comment))
-    redirect_to edit_post_path(@post)
+    redirect_to post_path(@post)
   end
 
   def destroy

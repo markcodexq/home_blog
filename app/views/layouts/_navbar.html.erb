@@ -1,0 +1,32 @@
+<nav class="navbar navbar-dark bg-dark navbar-expand-lg">
+  <div class="container-fluid">
+    <%= link_to "Blog", posts_path, class: "navbar-brand" %>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarScroll">
+      <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+        <li class="nav-item">
+          <%= link_to "Posts", posts_path, class: "nav-link active" %>
+        </li>
+      </ul>
+      <ul class="navbar-nav me-right my-2">
+      <% if user_signed_in? %>
+        <li class="nav-item account-name">
+          <%= link_to current_user.email, edit_user_registration_path %>
+        </li>
+        <li class="nav-item">
+          <%= button_to "Sign Out", destroy_user_session_path, class: "btn btn-warning mx-2", method: :delete %>
+        </li>
+      <% else %>
+        <li class="nav-item">
+          <%= link_to "Registration", new_user_registration_path, class: "btn btn-primary mx-2" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Sign In", new_user_session_path, class: "btn btn-outline-primary mx-2" %>
+        </li>
+      <% end %>
+      </ul>
+    </div>
+  </div>
+</nav>

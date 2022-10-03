@@ -1,15 +1,17 @@
-<div class="container">
-  <%= render 'form', post: @post %>
-  <%= link_to 'Back', posts_path %>
-</div>
+<%= render 'post', post: @post %>
+<%= link_to 'Back', posts_path, class: "btn btn-primary" %>
+<% if user_signed_in? %>
+  <%= link_to "Edit", edit_post_path(@post), class: "btn btn-outline-primary" %>
+  <%= button_to "Delete", post_path(@post), method: :delete, class: "btn btn-danger" %>
 
-<section class="comments">
-  <div class="commetn-form">
-    <h3>Leave a reply</h3>
-    <%= render 'comments/form' %>
-  </div>
-  <div class="container">
+  <section class="comments">
+    <div class="comment-form">
+      <h3>Leave a reply</h3>
+      <%= render 'comments/form' %>
+    </div>
     <h2>Comments: <%= @post.comments.count %></h2>
-    <%= render @post.comments %>
-  </div>
-</section>
+    <div class="comments-body">
+        <%= render @post.comments %>
+    </div>
+  </section>
+<% end %>
