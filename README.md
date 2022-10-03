@@ -1,24 +1,25 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+For use my blog you need install Ruby and Rails(I prefer install ruby with rbenv): 
 
-Things you may want to cover:
+* Ruby version 3.1.2
 
-* Ruby version
+* Rails version 7.0.4
 
-* System dependencies
+* Styles with bootstrap v5
 
-* Configuration
+* After install come to folder with project and paste "bundle" or "bundle install"
 
-* Database creation
+* Database sqlite3
 
-* Database initialization
+* For the run test command "rails spec"
 
-* How to run the test suite
+* For the run project just type "rails s" and in browser put "localhost:3000"
 
-* Services (job queues, cache servers, search engines, etc.)
+Enjoy for using that simple blog:
 
-* Deployment instructions
+* You can add post and delete it, edit, show
 
-* ...
+* You can add the user with device
+
+* You can comments the post, also can delete it
