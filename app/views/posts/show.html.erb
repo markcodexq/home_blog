@@ -1,9 +1,10 @@
 <%= render 'post', post: @post %>
+<div class="links-post">
 <%= link_to 'Back', posts_path, class: "btn btn-primary" %>
 <% if user_signed_in? %>
   <%= link_to "Edit", edit_post_path(@post), class: "btn btn-outline-primary" %>
   <%= button_to "Delete", post_path(@post), method: :delete, class: "btn btn-danger" %>
-
+</div>
   <section class="comments">
     <div class="comment-form">
       <h3>Leave a reply</h3>

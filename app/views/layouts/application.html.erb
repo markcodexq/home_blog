@@ -15,8 +15,8 @@
 
   <body>
     <%= render "layouts/navbar" %>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+    <p><%= flash[:notice] %></p>
+    <p><%= flash[:alert] %></p>
     <div class="container">
       <%= yield %>
     </div>
