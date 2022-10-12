@@ -8,7 +8,7 @@ For use my blog you need install Ruby and Rails(I prefer install ruby with rbenv
 
 * Styles with bootstrap v5
 
-* After install come to folder with project and paste "bundle" or "bundle install"
+* After install come to folder in terminal with project and paste "bundle" or "bundle install"
 
 * Database sqlite3
 
